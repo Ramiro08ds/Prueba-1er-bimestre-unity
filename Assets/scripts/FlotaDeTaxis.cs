@@ -13,8 +13,7 @@ public class FlotaDeTaxis : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cantidadDecombustible = cantidadTaxis * cantidadDias * kilometrosRecorridosxdia/15;
-        Debug.Log(cantidadDecombustible);
+        cantidadDecombustible = cantidadTaxis * cantidadDias * kilometrosRecorridosxdia / 15;
         if (cantidadDias < 5)
         {
             Debug.Log("cantidad de dias no valida");
@@ -27,17 +26,17 @@ public class FlotaDeTaxis : MonoBehaviour
         }
         else if (cantidadDecombustible < 100) {  
             costoTotal = cantidadDecombustible * precioPorLitro;
-            Debug.Log("Una flota de " + cantidadTaxis + " unidades trabajando durante" + cantidadDias + "días implicará un gasto de " + costoTotal + " pesos en concepto de combustible");
+            Debug.Log("Una flota de " + cantidadTaxis + " unidades trabajando durante " + cantidadDias + " días implicará un gasto de " + costoTotal + " pesos en concepto de combustible");
         }
         else if (cantidadDecombustible >= 100)
         {
             costoTotal = cantidadDecombustible * precioPorLitro;
             costoTotal = costoTotal - (costoTotal / 20);
-            Debug.Log("Una flota de " + cantidadTaxis + " unidades trabajando durante" + cantidadDias + "días implicará un gasto de " + costoTotal + " pesos en concepto de combustible con un descuento aplicado del 20%");
+            Debug.Log("Una flota de " + cantidadTaxis + " unidades trabajando durante " + cantidadDias + " días implicará un gasto de " + costoTotal + " pesos en concepto de combustible con un descuento aplicado del 20%");
         }
         else
         {
-            Debug.Log("error cambiar valores");
+            Debug.Log("error, cambiar valores");
             return;
         }
 
